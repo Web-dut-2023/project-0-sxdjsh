@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+<title>Search</title>
+<style>
+    /* Add some basic styles to make it look like Google */
+    body {
+        background-color: #fff;
+        font-family: Arial, sans-serif;
+        margin-top: 70px;
+        padding-top: 70px;
+        text-align: center;
+    }
+
+    form {
+        width: 350px;
+        height: 35px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 30px;
+    }
+
+    input[type=text] {
+        width: 85%;
+        height: 20px;
+        border-radius: 25px;
+        outline: none;
+        border: none;
+        font-size: 18px;
+        font-weight: bold;
+        padding-left: 8px;
+        box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+        margin-right: 10px;
+    }
+
+    button {
+        width: 90px;
+        height: 35px;
+        border-radius: 25px;
+        background-color: #42f4b3;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+    }
+
+    .advanced-search {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 350px;
+        margin: auto;
+        padding: 25px;
+    }
+
+    label {
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    input[type=text] {
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 25px;
+        outline: none;
+        border: none;
+        font-size: 18px;
+        font-weight: bold;
+        padding-left: 8px;
+        box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+    }
+</style>
+</head>
+
+<body>
+    <form action="https://www.google.com/search"><input type="text" name="q"><button>Google Search<tton><a
+                    href="https://www.google.com/imghp" style="margin-left: 10px;">Images</a><a
+                    href="https://www.google.com/advanced_search" style="margin-left: 10px;">Advanced Search</a>
+    </form>
+    < !-- Advanced Search Page -->
+        <div class="advanced-search" style="display:none;"><label for="allWords">All these words:</label><input
+                type="text" id="allWords" name="q"><br><label for="exactWord">This exact word or
+                phrase:</label><input type="text" id="exactWord" name="q"><br><label for="anyWords">Any of these
+                words:</label><input type="text" id="anyWords" name="q"><br><label for="noneWords">None of these
+                words:</label><input type="text" id="noneWords" name="q"><br><button
+                onclick="window.location.href='https://www.google.com/advanced_search?q='+document.getElementById('allWords').value+'&as_qdr=all&as_epq='+document.getElementById('exactWord').value+'&as_oq='+document.getElementById('anyWords').value+'&as_eq='+document.getElementById('noneWords').value">Advanced
